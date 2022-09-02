@@ -1,0 +1,24 @@
+section {
+  width: 500px;
+  height: 500px;
+  background-color: #e1d1ff;
+}
+
+#rgba {
+  width: 50%;
+  height: 50%;
+  background-color: rgba(255, 255, 255, 0.438);
+  /* OPACITY AND THE ALPHA CHANNEL
+  0.5 is how opaque/transparent - 0 is transparent and 1 is opaque 
+  NOTICE how alpha channel only affects the background color but opacity affects the whole element, including the text inside*/
+}
+
+#opacity {
+  width: 50%;
+  height: 50%;
+  background-color: yellow;
+  opacity: 0.5;
+}
+
+/* POSITION
+Position sets how an element is positioned in a document */
