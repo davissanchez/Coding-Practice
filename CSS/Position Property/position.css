@@ -1,0 +1,47 @@
+div {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(38, 54, 49);
+  border: 2px solid black;
+  margin: 10px;
+  display: inline-block;
+}
+
+.middle {
+  background-color: rgb(217, 187, 246);
+}
+
+#static .middle {
+  position: static;
+}
+/* this changes nothing */
+
+#relative .middle {
+  position: relative;
+  /* with position relative, we can offset the div by inserting space top bottom left and/or right */
+  top: 100px;
+  left: 10px;
+}
+
+#absolute {
+  position: relative;
+}
+
+#absolute .middle {
+  /* absolute makes it so that the div or whatever element doesn't take up any space in the document, and therefore doesn't affect the positioning of any other documents. BUT  you have to give it an ancestor, which is a parent element, and give a position (not static). This gives it some context and a base from where you can move it from, which in this case is the section*/
+  position: absolute;
+  top: 150px;
+  left: 200px;
+}
+
+#fixed .middle {
+  /* fixed is similar to absolute but it doesn't change as you scroll. and it's position is not related to any parent or anything */
+  position: fixed;
+  top: 0;
+  left: 500px;
+  background-color: chartreuse;
+}
+
+#fixed h2 {
+  color: chartreuse;
+}
