@@ -1,0 +1,84 @@
+h1 {
+  background-color: #e1d1ff;
+  border: 1px solid black;
+  display: inline;
+  /* h1's are block level elements and this changes them to inline*/
+}
+
+span {
+  background-color: paleturquoise;
+  border: 1px solid black;
+  display: block;
+  /* spans are inline elements and this changes them to block level elements*/
+}
+
+/* IMPORTANT: NOTE THAT width and height are respected with block elements but not for inline, except for that one little line where the content is
+When you want something inline but for all of the above things to be respected, use inline-block. See below for example. Div is a block element, and we want it inline, but also want our heigh widtch etc to be respected*/
+
+div {
+  height: 200px;
+  width: 200px;
+  background-color: olivedrab;
+  border: 5px solid black;
+  display: inline-block;
+}
+
+#example {
+  display: none;
+  /* this hides an element */
+}
+
+article {
+  font-size: 15px;
+}
+
+section {
+  background-color: rgb(147, 84, 61);
+  width: 500px;
+  height: 250px;
+  /* the three lines below make sure the div is centered in the section */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#unitexample {
+  background-color: aquamarine;
+  width: 50%;
+  height: 50%;
+
+  /* these are percentages of the parent tag, which is the section */
+}
+
+h2 {
+  font-size: 2em;
+  /* font size is twice that of the parent, which is the article tag */
+}
+p {
+  font-size: 0.75em;
+}
+
+button {
+  font-size: 2em;
+  padding: 0 1 em;
+  border-radius: 0.5em;
+  background-color: bisque;
+}
+/* when using em's, the relative shape staysthe same - because padding and border radius ems are affected by the font size em, THEN when you change the font size everything else is relative. Makes it very easy to scale shit up and down */
+
+#ems ul {
+  font-size: 1.5em;
+}
+/* here we see how the em's stack based on what's the parent and what's the parent of hte parent etc, which brings us to REMs below, which scale up or down based on font size of the html element */
+
+html {
+  font-size: 10px;
+}
+
+#rems ul {
+  font-size: 3rem;
+}
+
+#rems button {
+  font-size: 1rem;
+}

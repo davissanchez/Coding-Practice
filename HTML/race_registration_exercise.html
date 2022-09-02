@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Race Registration Exercise</title>
+  </head>
+  <body>
+    <h1>Race Registration!</h1>
+    <form action="/poop">
+      <p>
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" name="firstname" required />
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname" name="lastname" required />
+      </p>
+      <p>Select a Race:</p>
+      <p>
+        <label for="fun">Fun Run 5k</label>
+        <input type="radio" id="fun" name="run" value="fun" required />
+        <br />
+        <label for="half">Half Marathon</label>
+        <input type="radio" id="half" name="run" value="half" required />
+        <br />
+        <label for="full">Full Marathon</label>
+        <input type="radio" id="full" name="run" value="full" required />
+      </p>
+      <p>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+      </p>
+      <p>
+        <label for="select">Select Age Group</label>
+        <select id="select" name="selectage" required>
+          <option value="under18">Under 18</option>
+          <option value="18-30">18-30</option>
+          <option value="30-50">30-50</option>
+          <option value="30-50">50+</option>
+        </select>
+      </p>
+      <button type="submit">Register!</button>
+    </form>
+  </body>
+</html>

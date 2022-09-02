@@ -1,0 +1,54 @@
+div {
+  width: 200px;
+  height: 200px;
+  background-color: gold;
+}
+
+h1 {
+  background-color: pink;
+  width: 100px;
+  margin: 0;
+}
+
+/*BORDER PROPERTIES*/
+#one {
+  background-color: #f7e80f;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  box-sizing: border-box;
+  /*this box sizing border box makes it so that the border is a part of the element, so the border won't stick out past any of the elements*/
+}
+
+#two {
+  background-color: #dafa89;
+  border-width: 4px;
+  border-color: #581759;
+  border-style: dashed;
+  box-sizing: border-box;
+  border-left-width: 1px;
+  border-radius: 10%;
+  margin: 200px;
+}
+
+#three {
+  background-color: #fecfff;
+  /*now we are going to make the border elements more concise:
+  WIDTH | STYLE | COLOR */
+  border: 3px solid green;
+  border-radius: 50%;
+}
+
+/*PADDING
+  TOP | RIGHT | BOTTOM | LEFT */
+/*MARGIN
+  TOP | RIGHT | BOTTOM | LEFT */
+button {
+  padding: 10px 15px 10px 15px;
+  background-color: #fad89d;
+  margin: 30px 40px 30px 40px;
+}
+body {
+  margin: 0;
+  /*body comes with automatic margin and lots of people remove it*/
+}

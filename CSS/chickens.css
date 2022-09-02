@@ -1,0 +1,69 @@
+h1 {
+  text-align: center;
+  font-weight: normal;
+  text-decoration: olive underline wavy;
+  letter-spacing: 15px;
+  font-size: 75px;
+  font-family: Arial;
+}
+
+p {
+  text-align: right;
+  line-height: 2;
+}
+
+h2,
+h3 {
+  color: magenta;
+}
+/* this shows how you can select multiple elements and do the same thing to them*/
+
+#SuperSpecialID {
+  color: purple;
+}
+/*anytime you wanna single out one thing you can use this ID selector*/
+
+.class1 {
+  background-color: gold;
+}
+/*in span elements in html file you can specify a class, which in this case is class1, to single out certain things. this way is best practice*/
+
+li a {
+  color: teal;
+}
+/*descendant selector: this only touches anchor tags that are inside of an <li>*/
+
+h1 + p {
+  color: red;
+}
+/* adjacent selector: only selects paragraphs that are immediately preceded by an <h1>
+NOTE: not sure if there's any examples on this actual docment, this is bascially just notes */
+
+div > a {
+  color: brown;
+}
+/*direct child selector: only does a's that are direct descendents of a div, which means that the anchor tag can't be inside of a list inside of a div or that the anchor tag can't be inside of a button which is inside of the div. it has to be in the level directly under div - not necessarily the first thing after, but just in the level under*/
+
+input [type="password"] {
+  background-color: yellow;
+}
+/*Attribute selector: only affects all inputs with certain specified attributes. Very common to use this with inputs because the 'type =' attribute */
+
+a:hover {
+  background-color: #a8dadc;
+  color: blueviolet;
+}
+/*PSEUDO CLASSES: 
+keyword added to a selector that specifies a special state of the selected elements
+:active
+:checked
+:hover
+:nth-of-type() - in parentheses if I put 3 then it would pick the third one, if I put 3n then it would do every 3rd
+etc
+another example below*/
+a:active {
+  background-color: crimson;
+}
+
+/*SPECIFICITY: more specific = winner
+IDs beat out CLASSES which beat out ELEMENtS
