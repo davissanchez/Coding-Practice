@@ -1,0 +1,65 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+#container {
+  background-color: #003049;
+  width: 90%;
+  height: 500px;
+  margin: 0 auto;
+  border: 5px solid #003049;
+  /* this below essentially turns on flexbox properties */
+  /* see notes for more conceptual stuff */
+  display: flex;
+  /* . */
+  flex-direction: row;
+  /* . */
+  /* above is default and it moves left to right. row-reverse makes the main axis go from right to left instead of left to right */
+  /* . */
+  /* flex-direction: row-reverse; */
+  /* . */
+  /* flex-direction: column; */
+  /* . */
+  /* flex-direction: column-reverse; */
+  /* . */
+  /* justify-content determines how the content is distributed along the main axis */
+  /* . */
+  /* justify-content: flex-start;  */
+  /*above is default, puts content in whatever normal order it would be along the specified main axis, whether it's left to right, top to bottom, etc*/
+  /* . */
+  /* justify-content: flex-end; */
+  /* pushes everything to the end of the main axis */
+  /* . */
+  justify-content: center;
+  /*  */
+  /* justify-content: space-between; */
+  /*spaces all elements out along the main axis and leaves no room on the edge of the container*/
+  /* . */
+  /* justify-content: space-around; */
+  /* space around is similar to space between but they all have equal space on both sides, so items won't butt up against the edge */
+  /* . */
+  justify-content: space-evenly;
+  /* . */
+  flex-wrap: wrap;
+  /* flex-wrap: wrap-reverse; */
+  /* instead of elements or items squishing along one main axis, they wrap into multiple rows/columns....this is when cross axis starts to become relevant */
+  /* . */
+  /* align-items determines how things are distributed along the cross axis */
+  /* align-items: flex-start; */
+  /* align-items: flex-end; */
+  align-items: center;
+  /* . */
+  /* align-items: baseline; */
+  /* baseline aligns items based on the text and not the container */
+  /* . */
+}
+
+#container div {
+  width: 100px;
+  height: 100px;
+  font-size: 4em;
+}
