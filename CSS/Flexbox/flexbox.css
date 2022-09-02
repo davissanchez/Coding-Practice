@@ -15,7 +15,8 @@ h1 {
   /* this below essentially turns on flexbox properties */
   /* see notes for more conceptual stuff */
   display: flex;
-  /* . */
+  /* . 
+  .*/
   flex-direction: row;
   /* . */
   /* above is default and it moves left to right. row-reverse makes the main axis go from right to left instead of left to right */
@@ -25,7 +26,13 @@ h1 {
   /* flex-direction: column; */
   /* . */
   /* flex-direction: column-reverse; */
-  /* . */
+  /* . 
+  .
+  .
+  .
+  .
+  .
+  .*/
   /* justify-content determines how the content is distributed along the main axis */
   /* . */
   /* justify-content: flex-start;  */
@@ -35,7 +42,8 @@ h1 {
   /* pushes everything to the end of the main axis */
   /* . */
   justify-content: center;
-  /*  */
+  /* .
+  . */
   /* justify-content: space-between; */
   /*spaces all elements out along the main axis and leaves no room on the edge of the container*/
   /* . */
@@ -43,11 +51,25 @@ h1 {
   /* space around is similar to space between but they all have equal space on both sides, so items won't butt up against the edge */
   /* . */
   justify-content: space-evenly;
-  /* . */
+  /* . 
+  .
+  .
+  .
+  .
+  .
+  .
+  .*/
   flex-wrap: wrap;
   /* flex-wrap: wrap-reverse; */
   /* instead of elements or items squishing along one main axis, they wrap into multiple rows/columns....this is when cross axis starts to become relevant */
-  /* . */
+  /* . 
+  .
+  .
+  .
+  .
+  .
+  .
+  */
   /* align-items determines how things are distributed along the cross axis */
   /* align-items: flex-start; */
   /* align-items: flex-end; */
@@ -55,7 +77,21 @@ h1 {
   /* . */
   /* align-items: baseline; */
   /* baseline aligns items based on the text and not the container */
-  /* . */
+  /* .
+  .
+  .
+  .
+  .
+  .
+  
+  */
+  /* align-content  controls or distributes space along the cross axis, but only when we have multiple rows/columns AND flex-wrap: wrap or wrap reverse
+  eg if you're main axis goes left to right, it'll put your rows in different places along the y axis or space them out along the y axis accordingly*/
+  /* align-content: flex-start; */
+  /* align-content: flex-end; */
+  /* align-content: space-between; */
+  align-content: space-around;
+  /* align-content: center; */
 }
 
 #container div {
