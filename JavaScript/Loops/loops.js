@@ -30,3 +30,25 @@ while (count < 10) {
 
 //BREAK keyword
 //look this up if you need it
+
+//FOR OF LOOPS let you iterate through arrays
+let nums = [1, 34, 56, 2435, 75];
+for (let x of nums) {
+  console.log(x);
+}
+
+//to iterate over an object: use IN
+let object = {
+  key1: 5,
+  key2: 6,
+  key3: 38,
+};
+for (let x in object) {
+  console.log(`${x} corresponds to ${object[x]}`);
+  //new method:capital O in Object
+  console.log(
+    Object.values(object),
+    Object.keys(object),
+    Object.entries(object)
+  );
+}
