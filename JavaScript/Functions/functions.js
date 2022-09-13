@@ -43,3 +43,38 @@ function addFunction(x, y) {
 }
 console.log(addFunction(34, 14));
 console.log(addFunction(addFunction(51, 49), 100));
+
+function capitalize(str) {
+  let newString = str.charAt(0).toUpperCase() + str.slice(1);
+  console.log(newString);
+  return newString;
+}
+capitalize("eggplant");
+
+function sumArray(arrayOfNumbers) {
+  let total = 0;
+  for (let i = 0; i < arrayOfNumbers.length; i++) {
+    total = total + arrayOfNumbers[i];
+  }
+  console.log(total);
+  return total;
+}
+sumArray([1, 3, 5]);
+
+const daysOfWeek = {
+  1: "Monday",
+  2: "Tuesday",
+  3: "Wednesday",
+  4: "Thursday",
+  5: "Friday",
+  6: "Saturday",
+  7: "Sunday",
+};
+function returnDay(num) {
+  if (num < 1 || num > 7) {
+    return null;
+  } else {
+    return daysOfWeek[num];
+  }
+}
+console.log(returnDay(2));
