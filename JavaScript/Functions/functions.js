@@ -44,6 +44,7 @@ function addFunction(x, y) {
 console.log(addFunction(34, 14));
 console.log(addFunction(addFunction(51, 49), 100));
 
+//start of udemy exercises
 function capitalize(str) {
   let newString = str.charAt(0).toUpperCase() + str.slice(1);
   console.log(newString);
@@ -78,3 +79,31 @@ function returnDay(num) {
   }
 }
 console.log(returnDay(2));
+//end of udemy exercises
+
+//here's a function that creates another function that tests if a number is in between the originally specified two numbers
+function makeBetweenFunction(min, max) {
+  return function (num) {
+    return num >= min && num <= max;
+  };
+}
+const isChild = makeBetweenFunction(0, 18);
+const isAdult = makeBetweenFunction(19, 64);
+const isSenior = makeBetweenFunction(65, 120);
+console.log(isChild);
+//this will just show the function, next we'll pass in a number and we'll get a boolean
+console.log(isChild(17));
+console.log(isAdult(45));
+console.log(isSenior(84));
+
+//how to create our own methods:
+const myMath = {
+  pi: 3.14159265358979,
+  square: function (num) {
+    return num * num;
+  },
+  cube: function (num) {
+    return num ** 3;
+  },
+};
+console.log(myMath.pi, myMath.square(5), myMath.cube(5));
