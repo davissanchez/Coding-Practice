@@ -10,8 +10,7 @@ formVar.addEventListener("submit", function (event) {
   ulCats.append(newLi);
   inputVar.value = "";
 });
-//the input object has a .value method which is very useful for extracting data from inputs
-console.log(inputVar.value);
+//the input object has a .value method which is very useful for extracting data from inputs....see this above
 
 //.
 // .
