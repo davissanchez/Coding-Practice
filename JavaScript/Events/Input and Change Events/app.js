@@ -12,3 +12,21 @@ input.addEventListener("input", function (e) {
 
 //INPUT EVENT
 //.........this fires whenever what's in the input changes, and you don't have to leave it for it to fire. The leaving is the only difference between the change and input events
+
+//Totally unrelated test on syntax to add data to an object within a class in JavaScript
+class Test {
+  constructor(name) {
+    this.name = name;
+  }
+  data = {};
+  addData() {
+    const key = Math.random();
+    this.data[key] = `${Math.random()} is a random number.`;
+  }
+}
+
+const x = new Test("TEST NAME");
+for (let i = 0; i < 10; i++) {
+  x.addData();
+}
+console.log(x.data);
