@@ -1,0 +1,85 @@
+<template>
+
+    <lightning-spinner if:true={isLoading}></lightning-spinner>
+    
+    <lightning-card>
+        <div class="modal-header slds-modal__header slds-size_1-of-1" style="margin-bottom: 25px;">
+            <h4 class="title slds-text-heading--medium">Customer Service Request</h4>
+        </div>
+    
+        <div class="slds-var-p-around_medium">
+            <lightning-layout multiple-rows>
+
+                <lightning-layout-item size="12" class="slds-var-p-around_large">
+                    <lightning-input
+                        label="Full Name"
+                        data-fieldname="RequesterFullName__c"
+                        required
+                        onchange={handleInputOnChange}
+                    ></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" class="slds-var-p-around_large">
+                    <lightning-input
+                        label="Account Name"
+                        data-fieldname="AccountName__c"
+                        onchange={handleInputOnChange}
+                    ></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" class="slds-var-p-around_large">
+                    <lightning-input
+                        label="Assessor's Parcel Number"
+                        data-fieldname="AssessorsParcelNumber__c"
+                        type="text"
+                        max-length="9"
+                        onchange={handleInputOnChange}
+                    ></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" class="slds-var-p-around_large">
+                    <lightning-input
+                        label="Location Address"
+                        data-fieldname="Reported_Location_Address__c"
+                        onchange={handleInputOnChange}
+                    ></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" class="slds-var-p-around_large">
+                    <lightning-input
+                        label="Email"
+                        data-fieldname="TaxpayerEmail__c"
+                        type="email"
+                        pattern=".+@.+\..+"
+                        message-when-pattern-mismatch="Please enter a valid email."
+                        required
+                        onchange={handleInputOnChange}
+                    ></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" class="slds-var-p-around_large">
+                    <lightning-input
+                        label="Subject"
+                        data-fieldname="Subject"
+                        required
+                        onchange={handleInputOnChange}
+                    ></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" class="slds-var-p-around_large">
+                    <lightning-textarea
+                        label="Description"
+                        data-fieldname="Description"
+                        required
+                        onchange={handleInputOnChange}
+                    ></lightning-textarea>
+                </lightning-layout-item>
+
+                <!-- Submit -->
+                <lightning-layout-item size="12" class="slds-text-align_right">
+                    <lightning-button
+                        class="slds-var-p-right_medium"
+                        type="submit"
+                        label="Create Case"
+                        variant="brand"
+                        onclick={handleSubmit}
+                    ></lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    </lightning-card>
+</template>
