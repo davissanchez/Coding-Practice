@@ -1,17 +1,17 @@
-// import { LightningElement } from "lwc";
-// import { showToast } from "c/showToastUtility";
-// import createNewCase from "@salesforce/apex/CommunityCaseController.createNewCase";
+import { LightningElement } from "lwc";
+import { showToast } from "c/showToastUtility";
+import createNewCase from "@salesforce/apex/CommunityCaseController.createNewCase";
 
-// export default class CommunityCaseForm extends LightningElement {
-//   data = {};
+export default class CommunityCaseForm extends LightningElement {
+  data = {};
 
-//   isLoading = false;
+  isLoading = false;
 
-//   get inputs() {
-//     return this.template.querySelectorAll(
-//       "lightning-input, lightning-textarea"
-//     );
-//   }
+  get inputs() {
+    return this.template.querySelectorAll(
+      "lightning-input, lightning-textarea"
+    );
+  }
 
   reportValidity() {
     let isValid = true;
@@ -29,7 +29,6 @@
     const key = event.target.dataset.fieldname;
 
     this.data[key] = event.target.value;
-    console.log(this);
   }
 
   async handleSubmit() {
